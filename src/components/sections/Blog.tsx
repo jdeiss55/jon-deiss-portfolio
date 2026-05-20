@@ -19,7 +19,7 @@ export default function Blog() {
   };
 
   return (
-    <section id="blog" className="py-24">
+    <section id="writing" className="py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink-heading dark:text-parchment-heading mb-2">Writing</h2>

@@ -5,14 +5,18 @@ import ThemeToggle from '@/components/ui/ThemeToggle';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'AI Agents', href: '#ai-agents' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', target: 'about' },
+  { label: 'Experience', target: 'experience' },
+  { label: 'Projects', target: 'projects' },
+  { label: 'Skills', target: 'skills' },
+  { label: 'AI Agents', target: 'ai-agents' },
+  { label: 'Blog', target: 'writing' },
+  { label: 'Contact', target: 'contact' },
 ];
+
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,23 +38,23 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a
-            href="#about"
+          <button
+            onClick={() => scrollToSection('about')}
             className="font-bold text-lg text-ink-heading dark:text-parchment-heading hover:text-forest-mid dark:hover:text-forest-light transition-colors"
           >
             Jon<span className="text-forest-mid">.</span>Deiss
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <button
+                key={link.target}
+                onClick={() => scrollToSection(link.target)}
                 className="px-3 py-2 text-sm text-ink-heading dark:text-parchment-body hover:text-forest-hover dark:hover:text-forest-light transition-colors rounded-lg hover:bg-linen/60 dark:hover:bg-moss-secondary/60"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -70,14 +74,13 @@ export default function Header() {
         {menuOpen && (
           <div className="md:hidden bg-cream/98 dark:bg-moss/98 border-t border-earth-light dark:border-forest-dark/40 py-4">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block px-4 py-2.5 text-sm text-ink-heading dark:text-parchment-body hover:text-forest-hover dark:hover:text-forest-light hover:bg-linen/60 dark:hover:bg-moss-secondary/60 transition-colors"
+              <button
+                key={link.target}
+                onClick={() => { scrollToSection(link.target); setMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2.5 text-sm text-ink-heading dark:text-parchment-body hover:text-forest-hover dark:hover:text-forest-light hover:bg-linen/60 dark:hover:bg-moss-secondary/60 transition-colors"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
         )}
