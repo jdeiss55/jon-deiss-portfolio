@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink-body antialiased;
+  }
+
+  html.dark body {
+    @apply bg-moss text-parchment-body;
+  }
+}
+
+@layer components {
+  .card-glass {
+    @apply bg-offwhite border border-earth-light dark:bg-moss-surface dark:border-forest-dark/30;
+  }
+
+  .btn-primary {
+    @apply bg-cream text-ink-heading border-2 border-ink-heading rounded-[6px] font-medium
+           hover:bg-linen hover:border-forest-hover transition-all duration-200
+           dark:bg-moss-surface dark:text-parchment-heading dark:border-forest-mid/60
+           dark:hover:bg-moss-secondary dark:hover:border-forest-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-linen text-forest-dark border-2 border-forest-dark rounded-[6px] font-medium
+           hover:bg-[#D9D0BC] hover:border-forest-hover transition-all duration-200
+           dark:bg-moss-secondary dark:text-parchment-body dark:border-forest-light/50
+           dark:hover:bg-moss dark:hover:border-forest-hover;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-forest-dark to-forest-mid bg-clip-text text-transparent;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EDE8D5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4A882;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00C2E0;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0D1F3C;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #102444;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #B8E0FF;
+}
