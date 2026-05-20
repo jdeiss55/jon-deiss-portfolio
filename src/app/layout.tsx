@@ -28,7 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning style={{ scrollBehavior: 'auto' }}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+          }
+          window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+          }
+        ` }} />
+      </head>
       <body className={inter.className}>
         <Providers>
           <Header />
