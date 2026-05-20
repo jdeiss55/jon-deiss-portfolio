@@ -20,14 +20,14 @@ export const projects: ProjectEntry[] = [
       // TODO: List 2-4 key takeaways from building this project — what surprised you, what you learned, what you'd do differently
       lessonsLearned: ['Learned how to integrate the Anthropic Claude API for both content generation and email parsing.', 'Gained experience building a more complex Next.js app with multiple pages, a custom backend API, and a non-trivial data model.', 'Had fun designing a gamified user experience that turns a stressful process into something more engaging.'],
       // TODO: List planned next features or improvements you're considering
-      nextSteps: ['Continue to complete the UI/UX experience, still using placeholder models.', 'Add more features such as streak freeze potions, a shop to spend gold on fun cosmetic items, and more.', 'Continue to monitor the app for any bugs or issues and fix as needed.'],
+      nextSteps: ['Continue building out the UI/UX experience, still using placeholder models.', 'Add more features such as streak freeze potions, a shop to spend gold on fun cosmetic items, and more.', 'Continue to monitor the app for any bugs or issues and fix as needed.'],
     },
   },
   {
     id: 'ai-portfolio',
     title: 'AI Powered Portfolio',
     description:
-      'This site. Contains projects Ive built, blog posts I’ve written, and more. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features two live AI agents powered by the Anthropic Claude API.',
+      "This site. It contains projects I’ve built, blog posts I’ve written, and more. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. Features two live AI agents powered by the Anthropic Claude API.",
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Anthropic API', 'Framer Motion'],
     detail: {
       // TODO: Expand this overview with more technical depth once the project is fully shipped
@@ -54,7 +54,7 @@ export const projects: ProjectEntry[] = [
     tags: ['Godot', 'C#', 'Blender 3D Modeling', 'Gaming', 'Small Team Collaboration'],
     detail: {
       // TODO: Replace this with the actual project name and description once you're ready to publish it
-      overview: 'Details coming soon. Game will be based on a Pinball style roguelike, where the player can gain upgrades too boost their score in order to progress through the levels.',
+      overview: 'Details coming soon. The game will be based on a Pinball-style roguelike, where the player can gain upgrades to boost their score and progress through the levels.',
       // TODO: Add media
       media: [{ type: 'image', src: '/projects/project-x-blender.png', caption: 'Sample 3D Model' },],
       // TODO: Add lessons learned
@@ -83,9 +83,9 @@ export const projects: ProjectEntry[] = [
         { type: 'image', src: '/projects/pinball-feature-suggest.png', caption: 'Feature Suggestion Form' },
       ],
       // TODO: Add lessons learned
-      lessonsLearned: ['Learned about hosting with Vercel, building a simple React app with Vite, and integrating the Anthropic API for document understanding.', 'Freshened up on push/pull GitHub skills.'],
+      lessonsLearned: ['Learned about hosting with Vercel, building a simple React app with Vite, and integrating the Anthropic API for document understanding.', 'Refreshed git push/pull workflow skills.'],
       // TODO: Add next steps — e.g., more machines, search, community rules contributions
-      nextSteps: ['Continue to monitor if there are any requests for improvements or bugs to fix.', 'Add more machines manually or design a way for the site to manually pull the most updated rulesheets based on most recent updates (ex. Star Wars 0.91 code to Star Wars 0.95 code).'],
+      nextSteps: ['Continue to monitor for any requests for improvements or bugs to fix.', 'Add more machines manually, or design a way for the site to pull the latest rulesheets automatically (e.g., updating from Star Wars 0.91 to Star Wars 0.95 code).'],
     },
   },
   {
@@ -105,7 +105,7 @@ export const projects: ProjectEntry[] = [
         { type: 'image', src: '/projects/dnd-screenshot.png', caption: 'Characters in Action' },
       ],
       // TODO: Add lessons learned — candidates: Vue 3 CDN patterns, reactive state without Pinia, designing for offline use
-      lessonsLearned: ['Learned how to build a simple HTML site without the need to host. The original design was meant to be less of a manual effort and attempted to scrape data from DNDbeyond.com, but they unfortnuately block that kind of action.'],
+      lessonsLearned: ['Learned how to build a simple HTML site without needing external hosting. The original design was meant to be more automated and attempted to scrape data from DNDbeyond.com, but they unfortunately block that kind of action.'],
       // TODO: Add next steps — e.g., character sheets, encounter builder, initiative roller, mobile layout improvements
       nextSteps: ['Continue to modify the design to add features for my own personal use and attempt to create an automatic feed from character sheet directly to the app.'],
     },

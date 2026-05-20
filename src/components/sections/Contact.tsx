@@ -40,7 +40,7 @@ export default function Contact() {
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-ink-heading dark:text-parchment-heading mb-2">Let&apos;s Connect</h2>
           <p className="text-ink-muted dark:text-parchment-muted">
-            Open to AI product, solutions engineering, and implementation consulting roles, including federal.
+            Open to AI product, solutions engineering, and implementation consulting roles, including federal roles.
             Reach out and let&apos;s talk.
           </p>
         </AnimatedSection>
